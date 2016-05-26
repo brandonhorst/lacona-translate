@@ -1,11 +1,10 @@
 /** @jsx createElement */
 
-import _ from 'lodash'
-import { URL } from 'elliptical-url'
-import { String } from 'elliptical-string'
 import { createElement } from 'elliptical'
 import { openURL } from 'lacona-api'
-import { Command } from 'lacona-command'
+
+import _ from 'lodash'
+import { URL, String, Command } from 'lacona-phrases'
 import demoExecute from './demo'
 import languages from './languages'
 
@@ -68,4 +67,4 @@ const Translate = {
   }
 }
 
-export const extensions = [Translate]
+export default [Translate]
