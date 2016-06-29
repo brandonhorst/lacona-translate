@@ -16,9 +16,9 @@ const Language = {
     }))
 
     return (
-      <label text='language'>
+      <placeholder argument='language'>
         <list limit={10} items={items} />
-      </label>
+      </placeholder>
     )
   }
 }
@@ -43,22 +43,21 @@ const Translate = {
       openURL({url})
     })
   },
-  
   describe () {
     return (
       <sequence>
-        <literal text='translate ' category='action' />
+        <literal text='translate ' />
         <choice merge={true}>
-          <URL id='url' splitOn=' ' />
+          <URL argument='URL' id='url' splitOn='' />
           <String argument='phrase' id='phrase' limit={1} splitOn=' ' />
         </choice>
         <sequence optional={true} merge={true}>
-          <literal text=' from ' category='conjunction' />
+          <literal text=' from ' />
           <Language id='from' />
         </sequence>
         <sequence optional={true} merge={true}>
           <literal text=' to ' />
-          <repeat separator={<list items={[', ', ' and ', ', and ']} category='conjunction' limit={1} />} id='to' unique>
+          <repeat separator={<list items={[', ', ' and ', ', and ']} limit={1} />} id='to' unique>
             <Language />
           </repeat>
         </sequence>
