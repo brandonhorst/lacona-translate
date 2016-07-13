@@ -49,7 +49,7 @@ const Translate = {
         <literal text='translate ' />
         <choice merge={true}>
           <URL argument='URL' id='url' splitOn='' />
-          <String argument='phrase' id='phrase' limit={1} splitOn=' ' />
+          <String label='phrase' id='phrase' limit={1} splitOn=' ' />
         </choice>
         <sequence optional={true} merge={true}>
           <literal text=' from ' />
