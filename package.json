@@ -9,18 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/brandonhorst/lacona-translate.git"
+    "url": "git+https://github.com/laconalabs/lacona-translate.git"
   },
   "keywords": [
     "lacona",
     "translate"
   ],
-  "author": "@brandonhorst",
-  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/brandonhorst/lacona-translate/issues"
+    "url": "https://github.com/laconalabs/lacona-translate/issues"
   },
-  "homepage": "https://github.com/brandonhorst/lacona-translate",
+  "homepage": "https://github.com/laconalabs/lacona-translate",
   "devDependencies": {
     "babel-cli": "^6.10.1",
     "babel-plugin-transform-react-jsx": "^6.8.0",
@@ -40,5 +38,16 @@
     "plugins": [
       "transform-react-jsx"
     ]
-  }
+  },
+  "main": "lib/index.js",
+  "lacona": {
+    "title": "Google Translate",
+    "customPreferences": true,
+    "description": "Translate phrases and websites using Google Translate.",
+    "examples": [
+      "translate [我爱你](phrase) to [English](language)"
+    ]
+  },
+  "author": "Brandon Horst <brandonhorst@gmail.com> (http://brandonhorst.me/)",
+  "license": "Apache-2.0"
 }

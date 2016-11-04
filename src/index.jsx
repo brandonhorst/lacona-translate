@@ -5,7 +5,7 @@ import { openURL } from 'lacona-api'
 
 import _ from 'lodash'
 import { URL, String, Command } from 'lacona-phrases'
-import demoExecute from './demo'
+// import demoExecute from './demo'
 import languages from './languages'
 
 const Language = {
@@ -25,7 +25,7 @@ const Language = {
 
 const Translate = {
   extends: [Command],
-  demoExecute,
+  // demoExecute,
   execute (result) {
     result = _.defaults({}, result, {
       to: [{name: 'English', code: 'en'}],
@@ -43,7 +43,9 @@ const Translate = {
       openURL({url})
     })
   },
-  describe () {
+  describe ({config}) {
+    if (!config.enableTranslate) return
+
     return (
       <sequence>
         <literal text='translate ' />
@@ -66,4 +68,4 @@ const Translate = {
   }
 }
 
-export default [Translate]
+export const extensions = [Translate]

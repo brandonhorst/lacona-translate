@@ -1,0 +1,18 @@
+{
+  "translateHeader": {
+    "type": "header",
+    "title": "Google Translate",
+    "examples": [
+      "translate [hujambo](phrase)",
+      "translate [我爱你](phrase) to [English](language)",
+      "translate [hello](phrase) to [French](language)",
+      "translate [¿cómo estás?](phrase) from [Spanish](language) to [Japanese](language)",
+      "translate [univision.com](URL) to [English](language)"
+    ]
+  },
+  "enableTranslate": {
+    "title": "Enable Google Translate",
+    "type": "boolean",
+    "default": true
+  }
+}
